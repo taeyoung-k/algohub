@@ -31,4 +31,44 @@ DB : mysql
 ![물리_DB_추가_정리](https://user-images.githubusercontent.com/87019615/124610399-6dedb180-deab-11eb-9d62-0000ee457b50.jpg)
 
 
-# ..... 수정중
+## API 설계
+
+### 회원
+1. 로그인 `POST /api/auth/login`
+2. 사용자 인증 `GET /api/auth/me`
+3. 회원가입 `POST /api/signup`
+4. 프로필 조회 `GET /api/profile/{m_name}`
+
+### 알고리즘
+1. 알고리즘 분류 목록 `GET /api/categories`
+2. 알고리즘 문제 조회 `GET /api/algorithms/{id}`
+3. 알고리즘 문제 등록 `POST /api/algorithms/writing`
+4. 문제 검색 `GET /api/algorithms/{search}`
+5. 문제 해설 조회 `GET /api/solution/{p_title}/language/{language}`
+6. 문제 풀이 등록 `POST /api/solution/writing`
+7. 풀이 댓글 조회 `GET /api/solution/comments/{s_id}`
+8. 풀이 댓글 등록 `POST /api/solution/comments`
+9. 풀이 댓글 수정 `PUT /api/solution/comments/{s_cm_id}`
+10. 풀이 댓글 삭제 `DELETE /api/solution/comments/{s_cm_id}`
+
+### 멘토/멘티 추가
+1. 멘토 신청 `PUT /api/mentor-request`
+2. 멘토 목록 조회 `GET /api/mentors`
+3. 멘토 조회 `GET /api/mentors/{m_name}`
+4. 멘토 페이지 조회 `GET /api/mentors-room/{m_name}`
+5. 멘토 구독 `POST /api/mentoring/subscribe`
+6. 멘토게시판 게시글 등록 `POST /api/mentors/writing`
+7. 멘토게시판 게시글 수정 `PUT /api/mentor-board/{mb_id}`
+8. 멘토게시판 게시글 삭제 `DELETE /api/mentor-board/{mb_id}`
+9. 멘토 후기 조회 `GET /api/mentors/{m_name}/review`
+10. 멘토 후기 등록 `POST /api/mentors/review`
+11. 멘토 후기 수정 `PUT /api/mentor/{m_name}/review/{mr_r_id}`
+12. 멘토 후기 삭제 `DELETE /api/mentor/{m_name}/review/{mr_r_id}`
+13. 구독한 멘토 목록 조회 `GET /api/subscription-info/user/{m_id}`
+14. 채팅방 생성 `POST /api/mentors/createRoom`
+15. 채팅방 입장 `GET /api/mentors/joinRoom/{m_name}`
+16. 채팅방 퇴장 `POST /api/mentors/exitRoom/{chat_id}`
+17. 채팅방 조회 `GET /api/mentors/chatting/{m_name}`
+
+
+# 수정중 ...
