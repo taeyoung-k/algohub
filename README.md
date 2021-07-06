@@ -70,5 +70,8 @@ DB : mysql
 16. 채팅방 퇴장 `POST /api/mentors/exitRoom/{chat_id}`
 17. 채팅방 조회 `GET /api/mentors/chatting/{m_name}`
 
+## 참고
+
+- WebRTC signaling server https://github.com/Benkoff/WebRTC-SS
 
 # 수정중 ...
