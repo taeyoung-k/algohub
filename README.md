@@ -4,7 +4,7 @@
 
 기간 : 2021.03.08 ~ 2021.06.14
 
-개발언어 : 프론트엔드(react) / 백엔드(springboot)
+개발IDE 및 언어 : 프론트엔드 : react(javascript) / 백엔드 : springboot(java)
 
 Persistence lib : mybatis(SQL Mapper)
 
