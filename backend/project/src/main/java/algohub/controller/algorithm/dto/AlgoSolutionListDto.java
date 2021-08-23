@@ -1,16 +1,17 @@
 package algohub.controller.algorithm.dto;
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Data
-public class AlgoSaveDto {
+public class AlgoSolutionListDto {
     private String p_title;
     private String p_link;
-    private String p_category;
     private String p_content;
+    private String m_name;
+    private String m_p_image;
+    private int s_id;
     private String code;
     private String language;
+    private String s_like;
+    private String comments;
 }

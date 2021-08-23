@@ -21,7 +21,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
-@Component
+//@Component
 public class SignalHandler extends TextWebSocketHandler {
 
     @Autowired
