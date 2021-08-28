@@ -75,5 +75,3 @@ DB : mysql
 ## 참고
 
 - WebRTC signaling server https://github.com/Benkoff/WebRTC-SS
-
-# 수정중 ...
