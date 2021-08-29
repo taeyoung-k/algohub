@@ -25,7 +25,7 @@ export default function MentorWriting(props) {
     formData.append("mb_content", content);
 
     return axios
-      .post("/api/mentors/writing", formData)
+      .post("/api/mentors/writing", null, formData)
       .then((res) => {
         alert("성공");
         props.history.goBack();

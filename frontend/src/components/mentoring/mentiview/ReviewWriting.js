@@ -32,7 +32,7 @@ const ReviewWriting = (props) => {
     // formData.append("mr_r_data", content);
 
     return axios
-      .post("/api/mentors/review", formData)
+      .post("/api/mentors/review", null, formData)
       .then((res) => {
         alert("성공");
         props.history.goBack();
