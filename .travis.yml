@@ -6,6 +6,10 @@ branches:
   only:
     - master
 
+before_script:
+  - cd backend
+  - cd project
+
 # Travis CI 서버의 HOME
 cache:
   directories:
