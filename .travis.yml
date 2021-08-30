@@ -24,7 +24,7 @@ before_deploy:
   - mkdir -p deploy
   - mv algohub-webservice.zip deploy/algohub-webservice.zip
 
-deploy
+deploy:
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY
    
