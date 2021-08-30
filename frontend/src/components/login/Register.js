@@ -40,21 +40,21 @@ export default class RegisterBody extends Component {
     formData.append("m_tel", this.phoneNumber);
 
     // 테스트용
-    console.log(this.email);
-    console.log(this.password);
-    console.log(this.confirmPassword);
-    console.log(this.name);
-    console.log(this.phoneNumber);
+    //console.log(this.email);
+    //console.log(this.password);
+    //console.log(this.confirmPassword);
+    //console.log(this.name);
+    //console.log(this.phoneNumber);
 
     if (this.password !== this.confirmPassword) {
       this.setState({ modalContent: "비밀번호가 일치하지 않습니다." });
-      return axios.post("/api/error", null, formData);
+      return axios.post("/api/error", formData);
     }
 
     // axios 방식 요청 시
     // 회원가입을 하고 응답을 받아야함.
     // Success: res = statusCode: 200, message: Success
-    return axios.post(url, null, formData);
+    return axios.post(url, formData);
 
     // 이미지와 같이 파일이 포함된 데이터를 서버로 전송하고자 할 때 웹 표준에 맞는 헤더를 추가해 주어야 한다.
     // multipart/form-data: 전달하는 데이터에 파일이 포함되어 있을 때 설정해야하는 것
@@ -63,7 +63,7 @@ export default class RegisterBody extends Component {
     //         'content-type': 'multipart/form-data'
     //     }
     // }
-    // return axios.post(url, null, formData, config);
+    // return axios.post(url, formData, config);
   };
 
   // 버튼 눌렀을 시 동작

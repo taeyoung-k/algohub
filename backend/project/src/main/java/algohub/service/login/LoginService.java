@@ -19,15 +19,15 @@ public class LoginService {
     }
 
     public boolean login(MemberLogin memberLogin, HttpSession session) throws Exception {
-        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+//        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         MemberLogin member = mapper.login(memberLogin); // nullable
         if (member == null)
             return false;
 
-        boolean result = encoder.matches(memberLogin.getM_pwd(), member.getM_pwd());
+//        boolean result = encoder.matches(memberLogin.getM_pwd(), member.getM_pwd());
 
         // 패스워드 일치 여부 판별
-        if (result == false) {
+        if (!memberLogin.getM_pwd().equals(member.getM_pwd())) {
             return false;
         } else {
             // 세션 객체에 로그인 유저 저장
