@@ -72,6 +72,14 @@ DB : mysql
 16. 채팅방 퇴장 `POST /api/mentors/exitRoom/{chat_id}`
 17. 채팅방 조회 `GET /api/mentors/chatting/{m_name}`
 
+### 배포 시 WebRTC 제약사항 / AWS EC2 아마존 리눅스 2(AMI2 인스턴스)
+
+```
+EC2에 배포 시 WebRTC를 사용하려면 따로 TURN서버를 구축해야되는데 구축하려면 따로 우분투 인스턴스를 생성해야 된다.
+그러나 AMI2 인스턴스를 쓰고 있기 때문에 여기서는 따로 turn 서버 패키지를 찾을 수 없는 것 같다.
+그래서 우분투 인스턴스를 하나 더 생성하자니 인스턴스 2개 운용으로 비용이 나온다..
+```
+
 ## 참고
 
 - WebRTC signaling server https://github.com/Benkoff/WebRTC-SS
