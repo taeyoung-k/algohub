@@ -1,8 +1,10 @@
 package algohub.controller.algorithm.dto;
 
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
 public class AlgoListDto {
     private String p_category;
     private int p_number;
