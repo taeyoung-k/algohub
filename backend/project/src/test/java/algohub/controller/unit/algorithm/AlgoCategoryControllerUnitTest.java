@@ -43,13 +43,13 @@ class AlgoCategoryControllerUnitTest {
     void algoCategoriesTest() throws Exception {
 
         List<AlgoCategory> categories = new ArrayList<>();
-        categories.add(AlgoCategory.builder().p_category("그래프").build());
+        categories.add(AlgoCategory.builder().p_category("그리드").build());
 
         given(algoCategoryService.getAlgoCategory()).willReturn(categories);
 
         mvc.perform(MockMvcRequestBuilders.get("/api/categories").accept(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isOk())
-                .andExpect(MockMvcResultMatchers.content().string(Matchers.containsString("그래프")))
+                .andExpect(MockMvcResultMatchers.content().string(Matchers.containsString("그리드")))
                 .andDo(MockMvcResultHandlers.print());
     }
 
